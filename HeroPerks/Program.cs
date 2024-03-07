@@ -17,7 +17,7 @@ namespace HeroPerks
         {
             if (args.Length == 0)
         {
-            Console.WriteLine("No perks provided!");
+            Console.WriteLine("Player has no perks");s
             return;
         }
             Perks playerPerks = Perks.None;
@@ -42,7 +42,19 @@ namespace HeroPerks
                     Console.WriteLine("Unknown perk!");
                     return;
             }
+        }   
+             if (playerPerks == Perks.None)
+        {
+            Console.WriteLine("No perks at all!");
         }
+            else
+        {
+            Console.WriteLine($"Player has this perks: {playerPerks}");
+
+            if ((playerPerks & Perks.Stealth) != 0 && (playerPerks & Perks.DoubleJump) != 0)
+            {
+                Console.WriteLine("Silent jumper!");
+            }
         }
     }
 }
