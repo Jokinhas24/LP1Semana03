@@ -10,11 +10,8 @@ namespace ChanceString
             string str = Console.ReadLine();
             Console.WriteLine("Now write a character: ");
             string chr = Console.ReadLine();
-            
-            foreach chr in str:
-            {
-                str -= chr;
-            }
+
+            str = str.Replace(chr, "X");
 
             Console.WriteLine("Modified Sentence:");
             Console.Write(str);
