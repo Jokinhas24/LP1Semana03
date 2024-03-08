@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Text;
+using GameItem;
 
 namespace RPS
 {
@@ -38,9 +40,12 @@ namespace RPS
             }
             else
             {
-                if (((player1 == "rock") && (player2 == "scissors")) ||
-                    ((player1 == "scissors") && (player2 == "paper")) ||
-                    ((player1 == "paper") && (player2 == "rock")))
+                if (((player1 == Items.rock.ToString()) 
+                && (player2 == Items.scissors.ToString())) ||
+                    ((player1 == Items.scissors.ToString()) 
+                    && (player2 == Items.paper.ToString())) ||
+                    ((player1 == Items.paper.ToString()) 
+                    && (player2 == Items.rock.ToString())))
                 {
                     GameResult = 1; // Player 1 wins
                 }
