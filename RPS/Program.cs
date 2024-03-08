@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Text;
 using GameItem;
+using GameStatus;
 
 namespace RPS
 {
@@ -30,13 +31,10 @@ namespace RPS
 
             player1 = player1.ToLower();
             player2 = player2.ToLower();
-
-            Console.WriteLine(player1);
-            Console.WriteLine(player2);
-
+            
             if (player1 == player2)
             {
-                GameResult = 0; // Draw
+                GameResult = (int)Status.Draw; // Draw
             }
             else
             {
@@ -47,11 +45,11 @@ namespace RPS
                     ((player1 == Items.paper.ToString()) 
                     && (player2 == Items.rock.ToString())))
                 {
-                    GameResult = 1; // Player 1 wins
+                    GameResult = (int)Status.Player1Win; // Player 1 wins
                 }
                 else
                 {
-                    GameResult = 2; // Player 2 wins
+                    GameResult = (int)Status.Player2Win; // Player 2 wins
                 }
             }
             return GameResult;
