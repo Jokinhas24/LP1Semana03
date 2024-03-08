@@ -29,19 +29,25 @@ namespace RPS
             player1 = player1.ToLower();
             player2 = player2.ToLower();
 
+            Console.WriteLine(player1);
+            Console.WriteLine(player2);
+
             if (player1 == player2)
             {
                 GameResult = 0; // Draw
             }
-            if (((player1 == "rock") && (player2 == "scissors")) ||
-                ((player1 == "scissors") && (player2 == "paper")) ||
-                ((player1 == "paper") && (player2 == "rock")))
+            else
             {
-                GameResult = 1; // Player 1 wins
-            }
-            
-            {
-                GameResult = 2; // Player 2 wins
+                if (((player1 == "rock") && (player2 == "scissors")) ||
+                    ((player1 == "scissors") && (player2 == "paper")) ||
+                    ((player1 == "paper") && (player2 == "rock")))
+                {
+                    GameResult = 1; // Player 1 wins
+                }
+                else
+                {
+                    GameResult = 2; // Player 2 wins
+                }
             }
             return GameResult;
         }
