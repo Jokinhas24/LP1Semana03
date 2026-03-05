@@ -53,6 +53,28 @@ namespace CyberHack
                     }
                     
             }
+
+            if (system == SystemType.SmartCityCore)
+            {
+                foreach (HackTool hk in hacks)
+                    if ((hk == HackTool.AIOverride) && (hk == HackTool.Backdoor))
+                        {
+                            Console.WriteLine("System Hacked");
+                        }
+                    else if ((hk == HackTool.ZeroDay) && (hk == HackTool.BruteForce))
+                    {
+                        Console.WriteLine("System Hacked");
+                    }
+                    else if ((hk == HackTool.QuantumExploit) && (hk == HackTool.Phishing))
+                    {
+                        Console.WriteLine("System Hacked");
+                    }
+                    else
+                    {
+                        Console.WriteLine("System Secured");
+                    }
+                    
+            }
             
         }
     }

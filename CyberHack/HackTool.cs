@@ -2,7 +2,7 @@ namespace CyberHack
 {
     public enum HackTool
     {
-        BruteFore,
+        BruteForce,
         Phishing,
         Backdoor,
         ZeroDay,
