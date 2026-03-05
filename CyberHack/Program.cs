@@ -75,6 +75,24 @@ namespace CyberHack
                     }
                     
             }
+
+            if (system == SystemType.MilitaryAI)
+            {
+                foreach (HackTool hk in hacks)
+                    if ((hk == HackTool.AIOverride) && (hk == HackTool.Backdoor))
+                    {
+                        if ((hk == HackTool.ZeroDay) && (hk == HackTool.BruteForce))
+                        {
+                            if ((hk == HackTool.QuantumExploit) && (hk == HackTool.Phishing))
+                            {
+                                
+                            }
+                    else
+                    {
+                        Console.WriteLine("System Secured");
+                    }
+                    
+            }
             
         }
     }
