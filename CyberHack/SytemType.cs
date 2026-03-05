@@ -3,7 +3,7 @@ namespace CyberHack
     public enum SystemType
     {
         CorporateServer,
-        BankDataBase,
+        BankDatabase,
         SmartCityCore,
         MilitaryAI
     }

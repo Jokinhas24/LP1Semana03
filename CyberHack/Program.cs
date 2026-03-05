@@ -35,6 +35,24 @@ namespace CyberHack
                     }
                     
             }
+
+            if (system == SystemType.BankDatabase)
+            {
+                foreach (HackTool hk in hacks)
+                    if ((hk == HackTool.ZeroDay) && (hk == HackTool.Backdoor))
+                        {
+                            Console.WriteLine("System Hacked");
+                        }
+                    else if ((hk == HackTool.QuantumExploit) && (hk == HackTool.AIOverride))
+                    {
+                        Console.WriteLine("System Hacked");
+                    }
+                    else
+                    {
+                        Console.WriteLine("System Secured");
+                    }
+                    
+            }
             
         }
     }
