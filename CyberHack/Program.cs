@@ -6,7 +6,14 @@ namespace CyberHack
     {
         private static void Main(string[] args)
         {
-            Console.WriteLine("Hello LP!");
+            Enum.TryParse(Console.ReadLine(), out SystemType system);
+            Enum.TryParse(Console.ReadLine(), out HackTool hack);
+
+            if (system == SystemType.CorporateServer)
+            {
+                
+            }
+            Console.WriteLine("System Hacked");
         }
     }
 }

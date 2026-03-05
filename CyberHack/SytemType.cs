@@ -1,6 +1,6 @@
 namespace CyberHack
 {
-    public enum SytemType
+    public enum SystemType
     {
         CorporateServer,
         BankDataBase,
